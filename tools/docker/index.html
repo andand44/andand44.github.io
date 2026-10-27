@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -320,7 +320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -347,16 +347,16 @@
 
 
 
-<h1 id="docker">Docker</h1>
-<h2 id="_1">Определение</h2>
+<h1 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h1>
+<h2 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h2>
 <p>Docker — это платформа с открытым исходным кодом, предназначенная для автоматизации развертывания, масштабирования и управления приложениями с использованием контейнеризации. Контейнеры позволяют упаковать приложение со всеми его зависимостями, библиотеками и конфигурационными файлами в единый стандартизированный блок, который может работать в любой среде (на локальной машине, на сервере или в облаке).</p>
-<h2 id="_2">Зачем нужно</h2>
+<h2 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h2>
 <p>Docker решает проблему "работает на моей машине" (it works on my machine). Основные цели и преимущества использования Docker:
 1. <strong>Изоляция:</strong> Приложения и их зависимости изолированы друг от друга и от основной системы.
 2. <strong>Портативность:</strong> Контейнеры можно легко переносить между различными средами (разработка, тестирование, продакшен) без изменений в коде.
 3. <strong>Эффективность:</strong> Контейнеры используют ресурсы ядра операционной системы хоста, что делает их более легковесными и быстрыми по сравнению с традиционными виртуальными машинами.
 4. <strong>Масштабируемость:</strong> Упрощает горизонтальное масштабирование приложений и интеграцию с системами оркестрации, такими как Kubernetes.</p>
-<h2 id="_3">Пример</h2>
+<h2 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h2>
 <p>Рассмотрим простой пример создания Docker-контейнера для веб-приложения на Python (Flask).</p>
 <ol>
 <li>Создайте файл <code>app.py</code>:</li>
@@ -402,7 +402,7 @@ docker build -t my-flask-app .
 docker run -p 5000:5000 my-flask-app
 </code></pre>
 <p>После выполнения этих команд приложение будет доступно по адресу <code>http://localhost:5000</code>.</p>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/enterprise-rag-service">enterprise-rag-service</a></li>
 <li><a href="https://github.com/andand44/ollama-agents">ollama-agents</a></li>

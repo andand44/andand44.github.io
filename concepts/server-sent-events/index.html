@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -321,7 +321,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#javascript" class="md-nav__link">
+  <a href="#клиент-javascript" class="md-nav__link">
     <span class="md-ellipsis">
       
         Клиент (JavaScript)
@@ -332,7 +332,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#nodejs-express" class="md-nav__link">
+  <a href="#сервер-nodejs--express" class="md-nav__link">
     <span class="md-ellipsis">
       
         Сервер (Node.js / Express)
@@ -348,7 +348,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -375,19 +375,19 @@
 
 
 
-<h1 id="server-sent-events">Server-Sent Events</h1>
-<h2 id="_1">Определение</h2>
+<h1 id="server-sent-events">Server-Sent Events<a class="headerlink" href="#server-sent-events" title="Permanent link">&para;</a></h1>
+<h2 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h2>
 <p>Server-Sent Events (SSE) — это технология, позволяющая серверу отправлять асинхронные обновления клиенту (например, веб-браузеру) по протоколу HTTP. Она обеспечивает одностороннюю связь (только от сервера к клиенту) в реальном времени. В отличие от WebSockets, SSE работает поверх стандартного HTTP/HTTPS, что упрощает её интеграцию и позволяет использовать существующую сетевую инфраструктуру без дополнительных настроек.</p>
-<h2 id="_2">Зачем нужно</h2>
+<h2 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h2>
 <p>SSE идеально подходит для приложений, которым требуется получать поток данных в реальном времени, но не нужно отправлять данные обратно на сервер по тому же соединению. Основные сценарии использования:
 - <strong>Уведомления:</strong> мгновенная доставка уведомлений о новых сообщениях, лайках или системных событиях.
 - <strong>Стриминг данных:</strong> трансляция курсов валют, котировок акций, спортивных счетов или обновлений в социальных сетях.
 - <strong>Мониторинг состояния:</strong> отображение прогресса длительных процессов на сервере (например, обработка видео, генерация отчетов).
 - <strong>Логирование:</strong> вывод логов сервера в реальном времени прямо в браузере.</p>
 <p>Ключевые преимущества SSE включают нативную поддержку в браузерах (через API <code>EventSource</code>), автоматическое переподключение при разрыве соединения и поддержку HTTP/2.</p>
-<h2 id="_3">Пример</h2>
+<h2 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h2>
 <p>Рассмотрим базовый пример реализации SSE на клиенте (JavaScript) и сервере (Node.js с фреймворком Express).</p>
-<h3 id="javascript">Клиент (JavaScript)</h3>
+<h3 id="клиент-javascript">Клиент (JavaScript)<a class="headerlink" href="#клиент-javascript" title="Permanent link">&para;</a></h3>
 <pre><code class="language-javascript">// Подключаемся к серверному маршруту /events
 const eventSource = new EventSource('/events');
 
@@ -401,7 +401,7 @@ eventSource.onerror = function(error) {
     console.error('Ошибка соединения SSE:', error);
 };
 </code></pre>
-<h3 id="nodejs-express">Сервер (Node.js / Express)</h3>
+<h3 id="сервер-nodejs--express">Сервер (Node.js / Express)<a class="headerlink" href="#сервер-nodejs--express" title="Permanent link">&para;</a></h3>
 <pre><code class="language-javascript">const express = require('express');
 const app = express();
 
@@ -431,7 +431,7 @@ app.listen(3000, () =&gt; {
     console.log('SSE сервер запущен на порту 3000');
 });
 </code></pre>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/enterprise-rag-service">enterprise-rag-service</a></li>
 </ul>

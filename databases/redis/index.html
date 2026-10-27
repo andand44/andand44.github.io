@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -320,7 +320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -347,10 +347,10 @@
 
 
 
-<h1 id="redis">Redis</h1>
-<h2 id="_1">Определение</h2>
+<h1 id="redis">Redis<a class="headerlink" href="#redis" title="Permanent link">&para;</a></h1>
+<h2 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h2>
 <p>Redis (Remote Dictionary Server) — это высокопроизводительная система управления базами данных (СУБД) класса NoSQL, работающая в оперативной памяти по принципу «ключ-значение». Помимо простых строк, Redis поддерживает сложные структуры данных, такие как списки, множества, хэши и отсортированные множества, что делает его гибким инструментом для разработчиков.</p>
-<h2 id="_2">Зачем нужно</h2>
+<h2 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h2>
 <p>Redis используется там, где требуется максимальная скорость отклика и высокая пропускная способность. Основные сценарии применения:</p>
 <ul>
 <li><strong>Кэширование</strong>: самый популярный сценарий. Redis хранит результаты тяжелых запросов к основной базе данных, что значительно ускоряет работу приложения.</li>
@@ -358,7 +358,7 @@
 <li><strong>Очереди сообщений и Pub/Sub</strong>: встроенные механизмы позволяют использовать Redis как брокер сообщений для асинхронного взаимодействия между микросервисами.</li>
 <li><strong>Аналитика в реальном времени и лидерборды</strong>: структуры данных (например, Sorted Sets) позволяют мгновенно обновлять и получать рейтинги, счетчики и статистику.</li>
 </ul>
-<h2 id="_3">Пример</h2>
+<h2 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h2>
 <p>Пример использования Redis в качестве кэша в Python-приложении с использованием библиотеки <code>redis-py</code>:</p>
 <pre><code class="language-python">import redis
 import json
@@ -393,7 +393,7 @@ print(get_product_info(101))
 # Второй вызов (быстрый, берется из Redis)
 print(get_product_info(101))
 </code></pre>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/ollama-agents">ollama-agents</a></li>
 </ul>

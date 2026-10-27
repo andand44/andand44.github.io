@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -320,7 +320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -347,10 +347,10 @@
 
 
 
-<h1 id="langgraph">LangGraph</h1>
-<h3 id="_1">Определение</h3>
+<h1 id="langgraph">LangGraph<a class="headerlink" href="#langgraph" title="Permanent link">&para;</a></h1>
+<h3 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h3>
 <p><strong>LangGraph</strong> — это фреймворк с открытым исходным кодом от создателей LangChain, предназначенный для создания надежных, управляемых состоянием и многоагентных приложений на базе больших языковых моделей (LLM). В отличие от классических цепочек (chains), LangGraph позволяет описывать рабочие процессы в виде циклических графов, где узлы представляют собой шаги вычислений или вызовы агентов, а ребра — логику переходов между ними.</p>
-<h3 id="_2">Зачем нужно</h3>
+<h3 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h3>
 <p>Стандартные подходы к разработке LLM-приложений часто строятся на направленных ациклических графах (DAG), которые не поддерживают циклы. Это ограничивает создание по-настоящему автономных агентов. LangGraph решает эту проблему и предлагает:</p>
 <ol>
 <li><strong>Цикличность и ветвление:</strong> Возможность создавать циклы, что позволяет агентам возвращаться к предыдущим шагам, исправлять ошибки, уточнять запросы или вызывать инструменты до достижения нужного результата.</li>
@@ -358,7 +358,7 @@
 <li><strong>Человек в контуре (Human-in-the-loop):</strong> Возможность приостановить выполнение графа в любой момент для получения одобрения или корректировки от человека, а затем продолжить работу.</li>
 <li><strong>Многоагентные системы (Multi-agent):</strong> Удобные инструменты для оркестрации нескольких агентов, которые могут взаимодействовать и передавать задачи друг другу.</li>
 </ol>
-<h3 id="_3">Пример</h3>
+<h3 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h3>
 <p>Ниже приведен простой пример создания графа на LangGraph, который имитирует работу чат-бота с сохранением состояния:</p>
 <pre><code class="language-python">from typing import TypedDict
 from langgraph.graph import StateGraph, END
@@ -393,7 +393,7 @@ result = app.invoke(inputs)
 print(result[&quot;messages&quot;])
 # Вывод: ['Здравствуйте!', 'Привет! Я LangGraph. Чем могу помочь?']
 </code></pre>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/ollama-agents">ollama-agents</a></li>
 </ul>

@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -320,7 +320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -347,10 +347,10 @@
 
 
 
-<h1 id="nomic-embed-text">nomic-embed-text</h1>
-<h2 id="_1">Определение</h2>
+<h1 id="nomic-embed-text">nomic-embed-text<a class="headerlink" href="#nomic-embed-text" title="Permanent link">&para;</a></h1>
+<h2 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h2>
 <p><code>nomic-embed-text</code> — это высокопроизводительная модель для генерации текстовых эмбеддингов (векторных представлений) с открытым исходным кодом, разработанная компанией Nomic AI. Она преобразует слова, предложения или целые документы в многомерные числовые векторы, которые отражают их семантическое значение. Модель отличается увеличенным контекстным окном (до 8192 токенов) и может быть развернута локально (например, с помощью Ollama), что делает её отличной альтернативой проприетарным решениям вроде OpenAI <code>text-embedding-3</code>.</p>
-<h2 id="_2">Зачем нужно</h2>
+<h2 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h2>
 <p>Основная задача <code>nomic-embed-text</code> — обеспечить машину возможностью понимать смысловую близость текстов. Это критически важно для следующих сценариев:</p>
 <ol>
 <li><strong>Семантический поиск:</strong> поиск информации по смыслу, а не по точному совпадению ключевых слов.</li>
@@ -358,7 +358,7 @@
 <li><strong>Кластеризация и классификация:</strong> автоматическая группировка документов по темам без предварительной разметки.</li>
 <li><strong>Конфиденциальность и экономия:</strong> возможность локального запуска позволяет компаниям не передавать чувствительные данные в облачные API и экономить на запросах.</li>
 </ol>
-<h2 id="_3">Пример</h2>
+<h2 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h2>
 <p>Ниже приведен пример использования <code>nomic-embed-text</code> на Python с помощью библиотеки <code>ollama</code> для векторизации текста:</p>
 <pre><code class="language-python">import ollama
 
@@ -375,7 +375,7 @@ print(f'Длина вектора: {len(embedding_vector)}')
 print(f'Первые 5 значений: {embedding_vector[:5]}')
 </code></pre>
 <p>В данном примере текст преобразуется в числовой массив (вектор). Этот вектор затем можно сохранить в векторную базу данных (например, Chroma, Qdrant или pgvector) и использовать для быстрого поиска похожих документов по смысловому запросу.</p>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/enterprise-rag-service">enterprise-rag-service</a></li>
 </ul>

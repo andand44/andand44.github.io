@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -320,7 +320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -347,17 +347,17 @@
 
 
 
-<h1 id="ddgs">ddgs</h1>
-<h3 id="_1">Определение</h3>
+<h1 id="ddgs">ddgs<a class="headerlink" href="#ddgs" title="Permanent link">&para;</a></h1>
+<h3 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h3>
 <p><strong>DDGS</strong> (DuckDuckGo Search) — это программный инструмент (чаще всего одноименная Python-библиотека <code>duckduckgo_search</code>), предоставляющий интерфейс для выполнения поисковых запросов в поисковой системе DuckDuckGo. Инструмент позволяет разработчикам автоматизировать получение результатов поиска (текста, изображений, новостей, видео) без необходимости использования официальных платных API. В контексте разработки ИИ-систем DDGS часто выступает в роли «инструмента» (tool) для LLM-агентов, обеспечивая им доступ к сети Интернет.</p>
-<h3 id="_2">Зачем нужно</h3>
+<h3 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Доступ к актуальным данным для LLM</strong>: Большие языковые модели имеют ограниченную базу знаний (дату отсечения). DDGS позволяет подключать их к интернету для поиска информации в реальном времени (реализация паттерна RAG — Retrieval-Augmented Generation).</li>
 <li><strong>Отсутствие необходимости в API-ключах</strong>: В отличие от поисковых API Google или Bing, библиотека DDGS не требует сложной регистрации, получения ключей и привязки платежных данных (хотя имеет лимиты на частоту запросов).</li>
 <li><strong>Автоматизация и парсинг</strong>: Удобна для быстрого сбора данных, мониторинга упоминаний брендов, агрегации новостей и создания датасетов для машинного обучения.</li>
 <li><strong>Конфиденциальность</strong>: Использует поисковую систему DuckDuckGo, которая известна своим подходом к неотслеживанию действий пользователей.</li>
 </ol>
-<h3 id="_3">Пример</h3>
+<h3 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h3>
 <p>Пример использования библиотеки <code>duckduckgo_search</code> (которая предоставляет класс <code>DDGS</code>) на языке Python для получения текстовых результатов поиска:</p>
 <pre><code class="language-python">from duckduckgo_search import DDGS
 
@@ -373,7 +373,7 @@ with DDGS() as ddgs:
         print(f&quot;Ссылка: {result['href']}&quot;)
         print(f&quot;Краткое описание: {result['body']}\n&quot;)
 </code></pre>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/ollama-agents">ollama-agents</a></li>
 </ul>

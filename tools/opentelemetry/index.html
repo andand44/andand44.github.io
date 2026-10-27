@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -320,7 +320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -347,10 +347,10 @@
 
 
 
-<h1 id="opentelemetry">OpenTelemetry</h1>
-<h2 id="_1">Определение</h2>
+<h1 id="opentelemetry">OpenTelemetry<a class="headerlink" href="#opentelemetry" title="Permanent link">&para;</a></h1>
+<h2 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h2>
 <p>OpenTelemetry (сокращённо OTel) — это открытый стандарт и набор инструментов для сбора, генерации и экспорта телеметрии: распределённых трейсов, метрик и логов. Проект объединил усилия OpenTracing и OpenCensus и развивается под эгидой CNCF. OpenTelemetry предоставляет API, SDK, агенты и коллектор (OpenTelemetry Collector), но не занимается хранением или визуализацией данных: вместо этого он передаёт их в совместимые бэкенды, такие как Jaeger, Prometheus, Grafana, Zipkin или коммерческие SaaS-платформы.</p>
-<h2 id="_2">Зачем нужно</h2>
+<h2 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Устранение фрагментации.</strong> Раньше для метрик, трейсов и логов использовались разные библиотеки и форматы. OpenTelemetry предлагает единый подход.</li>
 <li><strong>Вендорная независимость.</strong> Инструментирование кода не привязано к конкретному вендору: бэкенд можно заменить без переписывания приложения.</li>
@@ -358,7 +358,7 @@
 <li><strong>Автоматическая инструментация.</strong> Готовые интеграции для популярных фреймворков, HTTP-клиентов, баз данных и брокеров сообщений ускоряют внедрение.</li>
 <li><strong>Стандартизация observability.</strong> Единый пайплайн упрощает эксплуатацию в Kubernetes и CI/CD, снижает стоимость поддержки мониторинга.</li>
 </ul>
-<h2 id="_3">Пример</h2>
+<h2 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h2>
 <p>Пример ручного инструментирования Python-приложения с помощью OpenTelemetry SDK и вывода трейсов в консоль:</p>
 <pre><code class="language-python">from opentelemetry import trace
 from opentelemetry.sdk.trace import TracerProvider
@@ -388,7 +388,7 @@ opentelemetry-bootstrap -a install
 OTEL_SERVICE_NAME=my-service OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317 opentelemetry-instrument python app.py
 </code></pre>
 <p>В результате приложение начнёт отправлять трейсы и метрики по протоколу OTLP в коллектор, откуда они могут быть направлены в систему хранения и визуализации.</p>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/enterprise-rag-service">enterprise-rag-service</a></li>
 </ul>

@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -320,7 +320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -347,11 +347,11 @@
 
 
 
-<h1 id="docker-compose">Docker Compose</h1>
-<h2 id="_1">Определение</h2>
+<h1 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h1>
+<h2 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h2>
 <p><strong>Docker Compose</strong> — это инструмент командной строки (CLI) и формат файла для определения и запуска многоконтейнерных приложений на базе Docker. Конфигурация описывается в YAML-файле (обычно <code>docker-compose.yml</code>), где объявляются <strong>сервисы</strong> (контейнеры), сети, тома и зависимости между ними. После этого весь стек поднимается одной командой, например <code>docker compose up</code>.</p>
 <p>Compose может работать как отдельная утилита <code>docker-compose</code> (Compose V1) или как подкоманда Docker CLI — <code>docker compose</code> (Compose V2, рекомендуемый вариант). Он не заменяет полноценные оркестраторы уровня Kubernetes, но отлично подходит для локальной разработки, тестирования и несложных развёртываний.</p>
-<h2 id="_2">Зачем нужно</h2>
+<h2 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h2>
 <p>Docker Compose решает проблему ручного запуска и связывания множества контейнеров. Основные задачи и преимущества:</p>
 <ul>
 <li><strong>Описание инфраструктуры как код (IaC)</strong> — вся конфигурация хранится в одном файле и версионируется в Git.</li>
@@ -362,7 +362,7 @@
 <li><strong>Масштабирование</strong> — можно запустить несколько экземпляров сервиса: <code>docker compose up --scale worker=3</code>.</li>
 <li><strong>Переменные окружения и секреты</strong> — удобная передача конфигурации в контейнеры.</li>
 </ul>
-<h2 id="_3">Пример</h2>
+<h2 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h2>
 <p>Файл <code>docker-compose.yml</code> для простого веб-приложения с базой данных PostgreSQL:</p>
 <pre><code class="language-yaml">services:
   web:
@@ -403,7 +403,7 @@ docker compose logs -f
 docker compose down
 </code></pre>
 <p>В этом примере Compose создаст два сервиса (<code>web</code> и <code>db</code>), изолированную сеть <code>app-network</code> и именованный том <code>db-data</code> для хранения данных PostgreSQL. Приложение будет доступно по адресу <code>http://localhost:8080</code>.</p>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/enterprise-rag-service">enterprise-rag-service</a></li>
 </ul>

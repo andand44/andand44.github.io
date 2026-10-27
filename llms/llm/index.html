@@ -287,7 +287,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#определение" class="md-nav__link">
     <span class="md-ellipsis">
       
         Определение
@@ -298,7 +298,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#зачем-нужно" class="md-nav__link">
     <span class="md-ellipsis">
       
         Зачем нужно
@@ -309,7 +309,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#пример" class="md-nav__link">
     <span class="md-ellipsis">
       
         Пример
@@ -320,7 +320,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#проекты" class="md-nav__link">
     <span class="md-ellipsis">
       
         Проекты
@@ -347,10 +347,10 @@
 
 
 
-<h1 id="llm">LLM</h1>
-<h2 id="_1">Определение</h2>
+<h1 id="llm">LLM<a class="headerlink" href="#llm" title="Permanent link">&para;</a></h1>
+<h2 id="определение">Определение<a class="headerlink" href="#определение" title="Permanent link">&para;</a></h2>
 <p><strong>LLM</strong> (Large Language Model, большая языковая модель) — это класс моделей машинного обучения, основанных на нейронных сетях (чаще всего на архитектуре Transformer), которые обучаются на очень больших массивах текстовых данных. Цель обучения — предсказание следующего слова (токена) в последовательности, что позволяет модели улавливать грамматику, факты, рассуждения и стилистику естественного языка. Современные LLM содержат от сотен миллионов до триллионов параметров и могут решать множество языковых задач без дополнительного обучения или после небольшой донастройки (fine-tuning).</p>
-<h2 id="_2">Зачем нужно</h2>
+<h2 id="зачем-нужно">Зачем нужно<a class="headerlink" href="#зачем-нужно" title="Permanent link">&para;</a></h2>
 <p>LLM применяются там, где требуется работа с естественным языком:</p>
 <ul>
 <li><strong>Генерация текста</strong>: статьи, письма, описания товаров, творческие истории.</li>
@@ -361,7 +361,7 @@
 <li><strong>Обобщение и поиск</strong>: краткое изложение длинных текстов, семантический поиск.</li>
 </ul>
 <p>Главное преимущество LLM — универсальность: одна модель может выполнять разные задачи по текстовой инструкции (prompt), часто в режиме zero-shot или few-shot, без обучения отдельной модели под каждую задачу.</p>
-<h2 id="_3">Пример</h2>
+<h2 id="пример">Пример<a class="headerlink" href="#пример" title="Permanent link">&para;</a></h2>
 <p>Пример использования LLM через библиотеку <code>transformers</code> от Hugging Face:</p>
 <pre><code class="language-python">from transformers import pipeline
 
@@ -378,7 +378,7 @@ print(result[0]['generated_text'])
 <pre><code class="language-text">Большая языковая модель — это нейронная сеть, обученная на огромном количестве текстов, которая умеет понимать и генерировать человеческий язык для решения различных задач...
 </code></pre>
 <p>В промышленных приложениях вместо локальной модели часто обращаются к облачным LLM (например, GPT-4, Claude, Llama 2) через API, передавая промпт и получая готовый ответ.</p>
-<h2 id="_4">Проекты</h2>
+<h2 id="проекты">Проекты<a class="headerlink" href="#проекты" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://github.com/andand44/enterprise-rag-service">enterprise-rag-service</a></li>
 </ul>
