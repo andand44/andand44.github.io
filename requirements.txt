@@ -1,3 +1,5 @@
 openai
 mkdocs-material
+mkdocs-awesome-pages-plugin
 python-dotenv
+python-slugify

@@ -1,0 +1,81 @@
+{
+  "ai-second-brain": [
+    "Python"
+  ],
+  "albina": [
+    "HTML",
+    "Bitrix"
+  ],
+  "astonia": [
+    "CSS"
+  ],
+  "edit-img": [
+    "Python"
+  ],
+  "enterprise-rag-service": [
+    "Cross-Encoder",
+    "Docker",
+    "Docker Compose",
+    "FastAPI",
+    "Flashrank",
+    "GitHub Actions",
+    "LangChain",
+    "LangChain-Qdrant",
+    "Langfuse",
+    "LLM",
+    "nomic-embed-text",
+    "Ollama",
+    "OpenTelemetry",
+    "pip",
+    "Pytest",
+    "Python",
+    "Qdrant",
+    "qwen3.5",
+    "RAG",
+    "Server-Sent Events",
+    "Swagger",
+    "Uvicorn",
+    "venv"
+  ],
+  "GATE31": [
+    "SCSS"
+  ],
+  "genotek": [
+    "HTML"
+  ],
+  "modulbank-test": [
+    "Python",
+    "SQL",
+    "pytest",
+    "pymysql",
+    "MySQL",
+    "pip"
+  ],
+  "ollama-agents": [
+    "Python",
+    "Ollama",
+    "Qwen2.5:3B",
+    "ddgs",
+    "BeautifulSoup4",
+    "requests",
+    "FastAPI",
+    "Telegram",
+    "Cloudflare Worker",
+    "aiogram",
+    "n8n",
+    "Docker",
+    "Google Sheets",
+    "PostgreSQL",
+    "Pytest",
+    "LangGraph",
+    "MCP Protocol",
+    "Redis",
+    "Qdrant"
+  ],
+  "playmot": [
+    "SCSS"
+  ],
+  "site": [
+    "HTML"
+  ]
+}

@@ -1,55 +1,80 @@
 import os
 import sys
+import json
+import re
+from slugify import slugify # <-- Новая библиотека
 from openai import OpenAI
 from dotenv import load_dotenv
-import re
 
 load_dotenv()
+client = OpenAI(base_url="https://api.orcarouter.ai/v1", api_key=os.getenv("LLM_API_KEY"))
 
-# Настройка клиента OrcaRouter (OpenAI-совместимый)
-client = OpenAI(
-    base_url="https://api.orcarouter.ai/v1",
-    api_key=os.getenv("LLM_API_KEY")
-)
+def process_term(term_name, raw_description=""):
+    # 1. Загружаем твои реальные навыки
+    my_skills = []
+    if os.path.exists("my_skills.json"):
+        with open("my_skills.json", "r", encoding="utf-8") as f:
+            my_skills = json.load(f)
+            
+    # 2. Проверяем, есть ли термин в твоем опыте (простой поиск по подстроке)
+    is_known = any(term_name.lower() in skill.lower() or skill.lower() in term_name.lower() for skill in my_skills)
+    
+    if not is_known:
+        print(f"⚠️ Внимание! Термина '{term_name}' нет в ваших проектах на GitHub.")
+        user_input = input("Вы точно с ним работали? (y/n): ")
+        if user_input.lower() != 'y':
+            print("Отмена добавления.")
+            return
 
-def process_term(term_name, raw_description):
-    print(f"Отправляем '{term_name}' на проверку нейросети...")
+    print(f"Проверяем и генерируем статью для '{term_name}'...")
+    
+    desc_prompt = f"Описание от пользователя: {raw_description}" if raw_description else "Описание отсутствует. Сгенерируй статью."
     
     prompt = f"""
-    Ты Senior AI Engineer. Пользователь добавил новый термин в свою базу знаний.
-    Проверь его на фактические ошибки, исправь стилистику и дополни полезными деталями.
-    
+    Ты база знаний разработчика. Напиши статью для вики.
     Термин: {term_name}
-    Описание: {raw_description}
+    {desc_prompt}
     
-    Верни ответ СТРОГО в формате Markdown. Без лишних вступлений.
-    Используй заголовок второго уровня (##) для названия.
-    Сделай разделы: Определение, Зачем нужно (если применимо), Пример использования.
+    Верни ответ СТРОГО в формате JSON:
+    {{
+        "category": "llms, frameworks, databases, concepts, tools или other",
+        "markdown": "текст статьи с разделами Определение, Зачем нужно, Пример"
+    }}
     """
     
     try:
         response = client.chat.completions.create(
-            model="deepseek/deepseek-v4-flash-free", # <-- ИЗМЕНИТЕ ЭТУ СТРОКУ
+            model="deepseek/deepseek-v4-flash-free",
             messages=[{"role": "user", "content": prompt}],
-            temperature=0.2
+            response_format={"type": "json_object"}
         )
         
-        final_text = response.choices[0].message.content
+        data = json.loads(response.choices[0].message.content)
+        category = data.get("category", "other")
+        markdown_text = data.get("markdown", "")
         
-        # Очищаем имя файла от лишних символов
-        safe_filename = re.sub(r'[^a-zA-Z0-9_\-]', '_', term_name.lower())
-        filepath = f"docs/{safe_filename}.md"
+        # 3. ИСПОЛЬЗУЕМ SLUGIFY ДЛЯ ИМЕНИ ФАЙЛА (исправляет баг с ______.md)
+        safe_filename = slugify(term_name) 
+        folder_path = f"docs/{category}"
+        filepath = f"{folder_path}/{safe_filename}.md"
         
-        with open(filepath, "w", encoding="utf-8") as f:
-            f.write(final_text)
+        if os.path.exists(filepath):
+            print(f"⚠️ Термин '{term_name}' уже существует в категории {category}!")
+            return
             
-        print(f"Успех! Термин сохранен в {filepath}")
+        os.makedirs(folder_path, exist_ok=True)
+        with open(filepath, "w", encoding="utf-8") as f:
+            f.write(f"# {term_name}\n\n{markdown_text}")
+            
+        print(f"✅ Успех! Термин сохранен в {filepath}")
         
     except Exception as e:
-        print(f"Ошибка при обращении к LLM: {e}")
+        print(f"Ошибка: {e}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Использование: python add_term.py 'Название термина' 'Твое сырое описание'")
+    if len(sys.argv) < 2:
+        print("Использование: python add_term.py 'Название' ['Описание']")
     else:
-        process_term(sys.argv[1], sys.argv[2])
+        term = sys.argv[1]
+        desc = sys.argv[2] if len(sys.argv) > 2 else ""
+        process_term(term, desc)
