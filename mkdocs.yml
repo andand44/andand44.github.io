@@ -1,0 +1,17 @@
+site_name: AI Second Brain
+site_description: Моя база знаний по AI Engineering
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+  features:
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Главная: index.md
+  - Термины: 
+    - FastAPI: fastapi.md
+    # Остальные файлы MkDocs подхватит автоматически, если настроить плагин, 
+    # но для начала можно просто добавлять их вручную или использовать awesome-pages

@@ -1,0 +1,3 @@
+openai
+mkdocs-material
+python-dotenv
