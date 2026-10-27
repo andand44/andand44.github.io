@@ -1,55 +1,51 @@
 # FastAPI
 
-## Определение
+### Определение
 
-FastAPI — это современный, высокопроизводительный веб-фреймворк для создания API на языке Python (версии 3.7+). Он основан на стандартах OpenAPI и JSON Schema, использует асинхронность (ASGI) и аннотации типов Python для автоматической валидации данных, сериализации и генерации интерактивной документации (Swagger UI, ReDoc).
+FastAPI — это современный, высокопроизводительный веб-фреймворк для создания API на языке Python (версии 3.7 и выше). Он основан на стандартных аннотациях типов Python, использует Starlette для асинхронной обработки запросов и Pydantic для валидации данных.
 
-## Зачем нужно
+### Зачем нужно
 
-FastAPI нужен для быстрой разработки надежных и масштабируемых HTTP API. Основные причины использования:
+FastAPI применяется для быстрой и эффективной разработки надежных REST API. Основные причины его использования:
+- **Высокая производительность:** Благодаря поддержке асинхронности (ASGI), скорость работы сопоставима с Node.js и Go.
+- **Автоматическая документация:** Фреймворк автоматически генерирует интерактивную документацию (Swagger UI и ReDoc) на основе написанного кода.
+- **Валидация данных:** Встроенная мощная валидация и сериализация данных с помощью Pydantic.
+- **Скорость разработки:** Минимизирует количество шаблонного кода и снижает количество ошибок за счет подсказок типов (type hints).
 
-- **Высокая производительность**: сравнима с Node.js и Go благодаря ASGI-серверам (Uvicorn, Hypercorn).
-- **Автоматическая документация**: генерирует OpenAPI-спецификацию и UI для тестирования endpoints из коробки.
-- **Валидация данных**: использует Pydantic и подсказки типов, уменьшая количество ошибок и boilerplate-кода.
-- **Асинхронность**: поддерживает `async`/`await` для эффективной обработки I/O-bound задач.
-- **Удобство разработки**: минимум кода, автодополнение в IDE, строгая типизация.
+### Пример
 
-## Пример
-
-Простейшее приложение FastAPI с базовыми маршрутами:
+Простейший пример приложения на FastAPI с использованием асинхронного эндпоинта:
 
 ```python
-from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+# Инициализация приложения
 app = FastAPI()
 
+# Модель данных для валидации
 class Item(BaseModel):
     name: str
     price: float
-    is_offer: Optional[bool] = None
+    is_offer: bool = None
 
-@app.get('/')
+# Базовый эндпоинт
+@app.get("/")
 async def read_root():
-    return {'message': 'Hello, FastAPI!'}
+    return {"Hello": "World"}
 
-@app.get('/items/{item_id}')
-async def read_item(item_id: int, q: Optional[str] = None):
-    return {'item_id': item_id, 'q': q}
+# Эндпоинт с параметрами пути и запроса
+@app.get("/items/{item_id}")
+async def read_item(item_id: int, q: str = None):
+    return {"item_id": item_id, "q": q}
 
-@app.post('/items/')
-async def create_item(item: Item):
-    return {'item_name': item.name, 'item_price': item.price}
+# Эндпоинт для обновления данных (PUT)
+@app.put("/items/{item_id}")
+async def update_item(item_id: int, item: Item):
+    return {"item_name": item.name, "item_id": item_id}
 ```
 
-Запуск приложения (например, через Uvicorn):
-
-```bash
-uvicorn main:app --reload
-```
-
-После запуска документация будет доступна по адресам `/docs` (Swagger UI) и `/redoc`.
+Чтобы запустить это приложение, достаточно сохранить код в файл `main.py` и выполнить команду `uvicorn main:app --reload` в терминале.
 
 ## Проекты
 - [enterprise-rag-service](https://github.com/andand44/enterprise-rag-service)

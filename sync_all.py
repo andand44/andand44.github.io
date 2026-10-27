@@ -204,6 +204,7 @@ def main():
                         data = json.loads(json_match.group(0))
                         category = data.get("category", "other")
                         markdown = data.get("markdown", "")
+                        markdown = re.sub(r'^#\s+.*?\n', '', markdown).strip()
                         
                         folder_path = f"docs/{category}"
                         os.makedirs(folder_path, exist_ok=True)
@@ -212,6 +213,7 @@ def main():
                         for repo in repo_list:
                             markdown += f"- [{repo}](https://github.com/{GITHUB_USER}/{repo})\n"
                             
+                        # Теперь пишем наш единый заголовок и чистый текст
                         with open(f"{folder_path}/{slug}.md", "w", encoding="utf-8") as f:
                             f.write(f"# {tech}\n\n{markdown}")
                 except Exception as e:

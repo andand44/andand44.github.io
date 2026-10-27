@@ -1,14 +1,43 @@
-site_name: AI Second Brain
-site_description: Моя база знаний по AI Engineering
+site_name: Andrey | AI Engineer
+site_url: https://andand44.github.io/
+site_description: Портфолио AI-инженера. Разработка агентов, RAG-систем и автоматизация на Python.
+site_author: Andrey
+
 theme:
   name: material
+  language: ru
   palette:
-    scheme: slate
-    primary: indigo
+    # Светлая тема
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на темную тему
+    # Темная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
   features:
     - navigation.sections
     - content.code.copy
+    - search.suggest
+    - search.highlight
 
 plugins:
   - search
   - awesome-pages
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/andand44
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/andand44
+    - icon: fontawesome/solid/envelope
+      link: mailto:andrey9991@gmail.com
