@@ -7,7 +7,6 @@ theme:
   name: material
   language: ru
   palette:
-    # Светлая тема
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
@@ -15,7 +14,6 @@ theme:
       toggle:
         icon: material/brightness-7
         name: Переключить на темную тему
-    # Темная тема
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: indigo
