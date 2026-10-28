@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+/* =========================================
+   1. Исправление кастомных SVG-иконок
+   ========================================= */
+.custom-icon {
+    /* Принудительно задаем размер 1em (как в шрифтах) */
+    width: 1em !important;
+    height: 1em !important;
+    /* Выравниваем по базовой линии текста */
+    vertical-align: middle;
+    /* Наследуем цвет текста */
+    fill: none;
+    stroke: currentColor;
+    /* Отступ справа, чтобы текст не прилипал */
+    margin-right: 0.4em;
+}
+
+/* =========================================
+   2. Улучшение бокового меню (Сайдбар)
+   ========================================= */
+.md-nav__list {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+/* Увеличиваем шрифт и область клика */
+.md-nav__link {
+    font-size: 1.1rem !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+    margin: 0 !important;
+}
+
+/* Красивый эффект при наведении (чтобы было видно зону клика) */
+.md-nav__link:hover {
+    background-color: var(--md-default-fg-color--lightest);
+    color: var(--md-primary-fg-color);
+}
+
+.md-nav__container.md-nav__link {
+    padding: 0 !important;
+    margin: .5rem 0 0 !important;
+}
+
+/* Выделяем активную страницу */
+.md-nav__link--active {
+    font-weight: bold;
+    color: var(--md-primary-fg-color) !important;
+}
+
+label.md-nav__link {
+    padding: 0 !important;
+    margin: 0 0 .5rem !important;
+}
+
+.md-nav__title {
+    margin: 0 0 1rem;
+}
+
+/* =========================================
+   3. Стили для списка контактов
+   ========================================= */
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.md-typeset ul.contact-list {
+    list-style-type: none;
+    margin: 1.5rem 0;
+}
+
+.contact-list li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.contact-list .custom-icon {
+    font-size: 1.3rem; /* Чуть больше для контактов */
+    color: var(--md-primary-fg-color); /* Синий цвет для соцсетей */
+}
+/* Чиним перенос длинных названий в футере */
+.md-footer__title {
+    white-space: normal !important;
+    word-wrap: break-word;
+    text-align: right;
+}
+.md-footer__link--prev .md-footer__title {
+    text-align: left;
+}
