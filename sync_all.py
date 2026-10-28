@@ -6,6 +6,7 @@ import requests
 from openai import OpenAI
 from dotenv import load_dotenv
 from slugify import slugify
+import glob
 
 load_dotenv()
 
@@ -219,6 +220,57 @@ def main():
                 except Exception as e:
                     print(f"  Ошибка: {e}")
             time.sleep(1)
+            
+
+def generate_category_pages():
+    """Создает index.md для каждой папки-категории, чтобы не было 404."""
+    categories_titles = {
+        "concepts": "Концепции и архитектура",
+        "databases": "Базы данных",
+        "frameworks": "Фреймворки и библиотеки",
+        "languages": "Языки программирования",
+        "llms": "Языковые модели (LLM)",
+        "tools": "Инструменты и сервисы",
+        "other": "Разное"
+    }
+    
+    for folder, title in categories_titles.items():
+        folder_path = f"docs/{folder}"
+        if not os.path.exists(folder_path):
+            continue
+            
+        index_path = os.path.join(folder_path, "index.md")
+        
+        content = f"# {title}\n\n"
+        content += f"В этом разделе собраны статьи по теме **{title}**.\n\n"
+        content += "## Статьи в этой категории:\n\n"
+        
+        # Ищем все md файлы в папке, кроме index.md
+        has_articles = False
+        for file in glob.glob(f"{folder_path}/*.md"):
+            if "index.md" in file:
+                continue
+            
+            has_articles = True
+            # Читаем первую строку файла, чтобы получить красивое название (H1)
+            with open(file, "r", encoding="utf-8") as f:
+                first_line = f.readline()
+                if first_line.startswith("# "):
+                    article_name = first_line[2:].strip()
+                else:
+                    article_name = os.path.basename(file).replace(".md", "").capitalize()
+                    
+            content += f"- [{article_name}]({os.path.basename(file)})\n"
+            
+        if not has_articles:
+            content += "*В этой категории пока нет статей.*\n"
+            
+        with open(index_path, "w", encoding="utf-8") as f:
+            f.write(content)
+            
 
 if __name__ == "__main__":
     main()
+    print("\nГенерируем страницы для категорий...")
+    generate_category_pages()
+    print("Все готово!")

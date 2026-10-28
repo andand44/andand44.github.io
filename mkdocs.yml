@@ -1,4 +1,4 @@
-site_name: Andrey | AI Engineer
+site_name: AI Engineer Portfolio | RAG & LLM Systems
 site_url: https://andand44.github.io/
 site_description: Портфолио AI-инженера. Разработка агентов, RAG-систем и автоматизация на Python.
 site_author: Andrey
@@ -6,6 +6,7 @@ site_author: Andrey
 theme:
   name: material
   language: ru
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -23,6 +24,10 @@ theme:
         name: Переключить на светлую тему
   features:
     - navigation.sections
+    - navigation.top
+    - navigation.footer   
+    - navigation.path     
+    - navigation.indexes
     - content.code.copy
     - search.suggest
     - search.highlight
@@ -46,3 +51,12 @@ extra:
       link: https://t.me/andand44
     - icon: fontawesome/solid/envelope
       link: mailto:andrey9991@gmail.com
+  og:
+    image: assets/preview.png
+    type: website
+  analytics:
+    provider: yandex-metrika
+    property: 113840247
+
+extra_css:
+  - stylesheets/extra.css
