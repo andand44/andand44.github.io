@@ -43,4 +43,5 @@ print(result[0]['generated_text'])
 В промышленных приложениях вместо локальной модели часто обращаются к облачным LLM (например, GPT-4, Claude, Llama 2) через API, передавая промпт и получая готовый ответ.
 
 ## Проекты
+- [ai_data_analyst](https://github.com/andand44/ai_data_analyst)
 - [enterprise-rag-service](https://github.com/andand44/enterprise-rag-service)

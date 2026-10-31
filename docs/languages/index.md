@@ -4,6 +4,7 @@
 
 ## Статьи в этой категории:
 
+- [Bash](bash.md)
 - [CSS](css.md)
 - [HTML](html.md)
 - [Python](python.md)

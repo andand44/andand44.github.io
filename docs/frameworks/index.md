@@ -10,4 +10,6 @@
 - [LangChain-Qdrant](langchain-qdrant.md)
 - [LangChain](langchain.md)
 - [LangGraph](langgraph.md)
+- [PydanticAI](pydanticai.md)
 - [Pytest](pytest.md)
+- [Streamlit](streamlit.md)

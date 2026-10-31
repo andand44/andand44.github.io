@@ -80,5 +80,23 @@
   ],
   "andand44.github.io": [
     "Python"
+  ],
+  "ai_data_analyst": [
+    "Python",
+    "Text-to-SQL",
+    "LLM",
+    "PydanticAI",
+    "SQLite",
+    "SQL",
+    "OrcaRouter",
+    "qwen2.5:1.5b",
+    "Ollama",
+    "DuckDB",
+    "Streamlit",
+    "Pandas",
+    "Tabulate",
+    "OpenAI API",
+    "pip",
+    "Bash"
   ]
 }

@@ -24,4 +24,5 @@ ORDER BY name ASC;
 ```
 
 ## Проекты
+- [ai_data_analyst](https://github.com/andand44/ai_data_analyst)
 - [modulbank-test](https://github.com/andand44/modulbank-test)

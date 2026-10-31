@@ -41,6 +41,7 @@
 
 ## <svg class="custom-icon"><use href="#icon-rocket"></use></svg>Мои ключевые проекты
 
+- **[AI Data Analyst](https://github.com/andand44/ai_data_analyst)** — Интерактивный веб-сервис на Streamlit для анализа CSV-файлов. Агент на PydanticAI сам пишет SQL-запросы к DuckDB и хранит историю чатов в SQLite.
 - **[Enterprise RAG Service](https://github.com/andand44/enterprise-rag-service)** — Микросервис на FastAPI с асинхронным стримингом, Reranking и трейсингом в Langfuse.
 - **[Ollama Agents](https://github.com/andand44/ollama-agents)** — Коллекция из 11 локальных ИИ-агентов (от простого Tool Calling до MCP-протокола).
 - **[B2B Lead Generator](https://github.com/andand44/ollama-agents/tree/main/09_b2b_lead_generator)** — Автоматизация сбора лидов с ранжированием через локальную LLM и n8n.

@@ -7,5 +7,7 @@
 - [LLM](llm.md)
 - [MCP Protocol](mcp-protocol.md)
 - [nomic-embed-text](nomic-embed-text.md)
+- [OrcaRouter](orcarouter.md)
+- [qwen2.5:1.5b](qwen2-5-1-5b.md)
 - [Qwen2.5:3B](qwen2-5-3b.md)
 - [qwen3.5](qwen3-5.md)

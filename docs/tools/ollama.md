@@ -43,5 +43,6 @@
    ```
 
 ## Проекты
+- [ai_data_analyst](https://github.com/andand44/ai_data_analyst)
 - [enterprise-rag-service](https://github.com/andand44/enterprise-rag-service)
 - [ollama-agents](https://github.com/andand44/ollama-agents)
