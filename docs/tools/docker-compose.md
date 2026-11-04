@@ -68,4 +68,5 @@ docker compose down
 В этом примере Compose создаст два сервиса (`web` и `db`), изолированную сеть `app-network` и именованный том `db-data` для хранения данных PostgreSQL. Приложение будет доступно по адресу `http://localhost:8080`.
 
 ## Проекты
+- [ai_guardrails_system](https://github.com/andand44/ai_guardrails_system)
 - [enterprise-rag-service](https://github.com/andand44/enterprise-rag-service)

@@ -48,5 +48,6 @@ async def update_item(item_id: int, item: Item):
 Чтобы запустить это приложение, достаточно сохранить код в файл `main.py` и выполнить команду `uvicorn main:app --reload` в терминале.
 
 ## Проекты
+- [ai_guardrails_system](https://github.com/andand44/ai_guardrails_system)
 - [enterprise-rag-service](https://github.com/andand44/enterprise-rag-service)
 - [ollama-agents](https://github.com/andand44/ollama-agents)

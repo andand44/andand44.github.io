@@ -58,5 +58,6 @@ docker run -p 5000:5000 my-flask-app
 После выполнения этих команд приложение будет доступно по адресу `http://localhost:5000`.
 
 ## Проекты
+- [ai_guardrails_system](https://github.com/andand44/ai_guardrails_system)
 - [enterprise-rag-service](https://github.com/andand44/enterprise-rag-service)
 - [ollama-agents](https://github.com/andand44/ollama-agents)

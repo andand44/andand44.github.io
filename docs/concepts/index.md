@@ -6,5 +6,6 @@
 
 - [Cross-Encoder](cross-encoder.md)
 - [RAG](rag.md)
+- [Regex](regex.md)
 - [Server-Sent Events](server-sent-events.md)
 - [Text-to-SQL](text-to-sql.md)

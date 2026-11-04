@@ -98,5 +98,21 @@
     "OpenAI API",
     "pip",
     "Bash"
+  ],
+  "ai_guardrails_system": [
+    "Python",
+    "FastAPI",
+    "Pydantic",
+    "PyTorch",
+    "HuggingFace",
+    "GLiNER2.5",
+    "Natasha",
+    "HTML5",
+    "Vanilla JS",
+    "CSS3",
+    "Tailwind CSS",
+    "Docker",
+    "Docker Compose",
+    "Regex"
   ]
 }
