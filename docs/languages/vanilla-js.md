@@ -45,4 +45,5 @@ Vanilla JS (или "чистый JavaScript") — это термин, обоз�
 Vanilla JS даёт разработчику полный контроль над поведением интерфейса и является основой любого современного фронтенда.
 
 ## Проекты
+- [ai_self_rag](https://github.com/andand44/ai_self_rag)
 - [ai_guardrails_system](https://github.com/andand44/ai_guardrails_system)

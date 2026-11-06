@@ -52,4 +52,5 @@ HTML5 нужен для создания семантически коррект
 ```
 
 ## Проекты
+- [ai_self_rag](https://github.com/andand44/ai_self_rag)
 - [ai_guardrails_system](https://github.com/andand44/ai_guardrails_system)

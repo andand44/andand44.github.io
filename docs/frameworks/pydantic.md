@@ -36,4 +36,5 @@ except ValidationError as e:
 В этом примере Pydantic автоматически преобразует строку `'30'` в целое число `30`, проверяет корректность переданных полей и позволяет легко сериализовать объект в JSON.
 
 ## Проекты
+- [ai_self_rag](https://github.com/andand44/ai_self_rag)
 - [ai_guardrails_system](https://github.com/andand44/ai_guardrails_system)

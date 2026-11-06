@@ -28,6 +28,7 @@ print(f"Сумма чисел: {total}")
 ```
 
 ## Проекты
+- [ai_self_rag](https://github.com/andand44/ai_self_rag)
 - [ai_guardrails_system](https://github.com/andand44/ai_guardrails_system)
 - [ai_data_analyst](https://github.com/andand44/ai_data_analyst)
 - [andand44.github.io](https://github.com/andand44/andand44.github.io)

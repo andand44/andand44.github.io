@@ -53,4 +53,5 @@ print(result["messages"])
 ```
 
 ## Проекты
+- [ai_self_rag](https://github.com/andand44/ai_self_rag)
 - [ollama-agents](https://github.com/andand44/ollama-agents)

@@ -49,4 +49,5 @@ CSS3 позволяет разработчикам отделять содерж
 В этом примере применяются такие свойства CSS3, как `linear-gradient`, `border-radius`, `box-shadow` и `transition`, которые делают страницу более современной и привлекательной без использования дополнительных изображений или JavaScript.
 
 ## Проекты
+- [ai_self_rag](https://github.com/andand44/ai_self_rag)
 - [ai_guardrails_system](https://github.com/andand44/ai_guardrails_system)

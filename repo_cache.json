@@ -114,5 +114,23 @@
     "Docker",
     "Docker Compose",
     "Regex"
+  ],
+  "ai_self_rag": [
+    "Python",
+    "FastAPI",
+    "LangChain",
+    "LangGraph",
+    "Pydantic",
+    "Qdrant",
+    "BM25",
+    "E5 embeddings",
+    "Langfuse",
+    "GigaChat",
+    "Ollama",
+    "HTML5",
+    "CSS3",
+    "Vanilla JS",
+    "Docker",
+    "Docker Compose"
   ]
 }

@@ -41,6 +41,8 @@
 
 ## <svg class="custom-icon"><use href="#icon-rocket"></use></svg>Мои ключевые проекты
 
+- **[Advanced Self-RAG Assistant](https://github.com/andand44/ai_self_rag)** — Интеллектуальный RAG-ассистент на LangGraph. Использует гибридный поиск (BM25 + Qdrant), логику самокоррекции запросов (Self-RAG), защиту от галлюцинаций и трейсинг в Langfuse.
+- **[AI Guardrails System](https://github.com/andand44/ai_guardrails_system)** — Enterprise-сервис для защиты персональных данных (PII). Многослойная фильтрация (Regex + Natasha + GLiNER2) и Guardrails для безопасной работы LLM.
 - **[AI Data Analyst](https://github.com/andand44/ai_data_analyst)** — Интерактивный веб-сервис на Streamlit для анализа CSV-файлов. Агент на PydanticAI сам пишет SQL-запросы к DuckDB и хранит историю чатов в SQLite.
 - **[Enterprise RAG Service](https://github.com/andand44/enterprise-rag-service)** — Микросервис на FastAPI с асинхронным стримингом, Reranking и трейсингом в Langfuse.
 - **[Ollama Agents](https://github.com/andand44/ollama-agents)** — Коллекция из 11 локальных ИИ-агентов (от простого Tool Calling до MCP-протокола).

@@ -40,4 +40,5 @@ print(chain.run("экологичные зубные щетки"))
 ```
 
 ## Проекты
+- [ai_self_rag](https://github.com/andand44/ai_self_rag)
 - [enterprise-rag-service](https://github.com/andand44/enterprise-rag-service)

@@ -4,6 +4,7 @@
 
 ## Статьи в этой категории:
 
+- [GigaChat](gigachat.md)
 - [LLM](llm.md)
 - [MCP Protocol](mcp-protocol.md)
 - [nomic-embed-text](nomic-embed-text.md)
